@@ -13,3 +13,22 @@
 * In terminal, type the command; `npm install -D tailwindcss postcss autoprefixer`
 ![alt text](img/image-1.png)
 
+* Next, type the following command;  
+`npx tailwindcss init -p`  
+
+![alt text](img/image-2.png)
+
+* Configure your template paths
+Add the paths to all of your template files in your `tailwind.config.js` file.  (Copy and paste the  - [🌐 following](https://tailwindcss.com/docs/guides/vite))
+![alt text](img/image-3.png)
+
+* Delete everything inside index.css.
+and add the following in it.  
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+* In terminal type `npm run dev`  
+Now the environment is ready to work with.
