@@ -32,3 +32,12 @@ and add the following in it.
 
 * In terminal type `npm run dev`  
 Now the environment is ready to work with.
+
+## Adding Font from 
+`https://fonts.google.com/`
+
+- Enter the font family name in search box e.g. "Poppins"
+- Select the whole family
+- Copy the link 
+- Add the link into index.html file inside `head` under the `title` line
+
