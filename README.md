@@ -52,3 +52,8 @@ Now the environment is ready to work with.
 - Go to [🌐 fontawesome](https://fontawesome.com/search?q=tailwindcss&o=r)
 - Using search bar find a desired icon
 - Copy its link and add it to your html file.
+
+## Creating React Components
+- Create a `components` folder in `src` folder.
+- Create a `jsx` file with the components name. e.g. `Hero.jsx`
+- Shortcut for the component: type `rfce` to populate the component file.
