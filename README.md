@@ -41,3 +41,14 @@ Now the environment is ready to work with.
 - Copy the link 
 - Add the link into index.html file inside `head` under the `title` line
 
+## Adding Fontawesome
+1. Add cdnjs link 
+- Go to    [🌐 cdnjs]( https://cdnjs.com/libraries/font-awesome)
+
+- Copy the link shown
+![alt text](img/image-4.png)
+
+2. Add icon/s to your project
+- Go to [🌐 fontawesome](https://fontawesome.com/search?q=tailwindcss&o=r)
+- Using search bar find a desired icon
+- Copy its link and add it to your html file.
