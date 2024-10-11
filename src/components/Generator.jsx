@@ -1,8 +1,13 @@
 import React from 'react'
+import SectionWrapper from './SectionWrapper'
 
 function Generator() {
   return (
-    <div>Generator</div>
+    <SectionWrapper 
+        header="Generate your workout."
+        title= {["Time", "for", "BEAST", "MODE"]}
+    >
+    </SectionWrapper>
   )
 }
 
