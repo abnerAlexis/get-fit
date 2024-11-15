@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionWrapper from './SectionWrapper'
 import { SCHEMES, WORKOUTS } from '../utils/beast';
+import Button from './Button';
 
 function Header(props) {
     const { index, title, description } = props;
@@ -16,11 +17,9 @@ function Header(props) {
     )
 }
 
-function Generator() {
+function Generator(props) {
+    const {beastMode, setBeastMode, muscles, setMuscles, goal, setGoal, updateWorkout} = props;
     const [showModal, setShowModal] = useState(false);
-    const [beastMode, setBeastMode] = useState("individual");
-    const [muscles, setMuscles] = useState([]);
-    const [goal, setGoal] = useState("strength_power");
 
     const toggleModal = () => {
         setShowModal(!showModal);
@@ -65,7 +64,7 @@ function Generator() {
                             setMuscles([])
                             setBeastMode(type);
                         }}
-                            className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-4 rounded-lg'
+                            className={'bg-slate-950 border border-blue-400 duration-200 px-4 hover:border-blue-600 py-4 rounded-lg'
                                 + (type === beastMode ? ' ' : ' ')
                             }
                             key={typeIndex}
@@ -106,14 +105,14 @@ function Generator() {
                 title={'Become a Beast!'}
                 description={'Select your ultimate objective.'}
             />
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
 
                 {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
                     return (
                         <button onClick={() => {
                             setGoal(scheme);
                         }}
-                            className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-4 rounded-lg'
+                            className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-4 rounded-lg px-4'
                                 + (scheme === goal ? '' : ' ')
                             }
                             key={schemeIndex}
@@ -124,7 +123,7 @@ function Generator() {
                 })}
                 {/* console.log("Goal:" {goal}) */}
             </div>
-
+            <Button func={updateWorkout} text={"Formulate"}></Button>
         </SectionWrapper>
     )
 }
