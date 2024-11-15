@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 function Hero() {
   return (
@@ -14,7 +15,7 @@ function Hero() {
             I bid you a fond farewell. It’s time to swap the remote for dumbbells, the snacks for smoothies, and 
             the sweatpants for...well, sweatpants—but now they’ll be <span className='text-blue-400 font-medium '>workout-approved</span>.
         </p>
-        <button className='px-8 py-4 rounded-md border-[2px] bg-slate-950 border-blue-400 border-solid blueshadow duration-200'><p>Accept & Begin</p></button>
+        <Button text="Accept & Begin"></Button>
     </div>
   )
 }

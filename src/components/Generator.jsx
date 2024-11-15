@@ -32,7 +32,7 @@ function Generator() {
             return
         }
 
-        if (muscles.length > 3) {
+        if (muscles.length > 2) {
             return
         }
 
@@ -43,7 +43,7 @@ function Generator() {
         }
 
         setMuscles([...muscles, muscleGroup])
-        if (muscles.length === 3) {
+        if (muscles.length === 2) {
             setShowModal(false)
         }
     }
@@ -62,6 +62,7 @@ function Generator() {
                 {Object.keys(WORKOUTS).map((type, typeIndex) => {
                     return (
                         <button onClick={() => {
+                            setMuscles([])
                             setBeastMode(type);
                         }}
                             className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-4 rounded-lg'
@@ -82,7 +83,7 @@ function Generator() {
             />
             <div className='bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col'>
                 <button onClick={toggleModal} className='relative p-3 flex items-center justify-center'>
-                    <p>Select the muscle groups</p>
+                    <p className='capitalize'>{muscles.length == 0 ? "Select the muscle groups" : muscles.join(" ")}</p>
                     <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2  fa-caret-down"></i>
                 </button>
                 {showModal && (
