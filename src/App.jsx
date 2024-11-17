@@ -15,6 +15,7 @@ function App() {
     if (muscles.length === 0) {
       return
     }
+    console.log("New workout:", newWorkout);
     setWorkout(newWorkout);
   }
 
