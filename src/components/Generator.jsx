@@ -17,7 +17,7 @@ function Header(props) {
     )
 }
 
-function Generator(props) {
+const Generator = (props) => {
     const {beastMode, setBeastMode, muscles, setMuscles, goal, setGoal, updateWorkout} = props;
     const [showModal, setShowModal] = useState(false);
 
@@ -49,6 +49,7 @@ function Generator(props) {
 
     return (
         <SectionWrapper
+            id={'generate'}
             header="Generate your workout."
             title={["Time", "for", "BEAST", "MODE"]}
         >
@@ -65,7 +66,7 @@ function Generator(props) {
                             setBeastMode(type);
                         }}
                             className={'bg-slate-950 border border-blue-400 duration-200 px-4 hover:border-blue-600 py-4 rounded-lg'
-                                + (type === beastMode ? ' ' : ' ')
+                                + (type === beastMode ? 'border-blue-600' : 'border-blue-400')
                             }
                             key={typeIndex}
                         >
@@ -113,7 +114,7 @@ function Generator(props) {
                             setGoal(scheme);
                         }}
                             className={'bg-slate-950 border border-blue-400 duration-200 hover:border-blue-600 py-4 rounded-lg px-4'
-                                + (scheme === goal ? '' : ' ')
+                                + (scheme === goal ? 'border-blue-600' : 'border-blue=400')
                             }
                             key={schemeIndex}
                         >
@@ -121,7 +122,6 @@ function Generator(props) {
                         </button>
                     )
                 })}
-                {/* console.log("Goal:" {goal}) */}
             </div>
             <Button func={updateWorkout} text={"Formulate"}></Button>
         </SectionWrapper>

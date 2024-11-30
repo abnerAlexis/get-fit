@@ -1,16 +1,15 @@
 import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./beast"
 const exercises = exercisesFlattener(EXERCISES)
 
-
-export const generateWorkout = (args) => {
-    const {beastMode:workout, muscles, goal} = args;
+export function generateWorkout(args) {
+    const { muscles, beastMode, goal } = args
     let exer = Object.keys(exercises);
     exer = exer.filter((key) => exercises[key].meta.environment !== "home");
     let includedTracker = [];
     let numSets = 5;
     let listOfMuscles;
 
-    if (workout === "individual") {
+    if (beastMode === "individual") {
         listOfMuscles = muscles;
     } else {
         listOfMuscles = WORKOUTS[workout][muscles[0]];

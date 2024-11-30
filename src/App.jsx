@@ -11,12 +11,15 @@ function App() {
   const [goal, setGoal] = useState("strength_power");
 
   const updateWorkout = () => {
-    let newWorkout = generateWorkout(beastMode, muscles, goal);
-    if (muscles.length === 0) {
+    if (muscles.length < 1) {
       return
     }
-    console.log("New workout:", newWorkout);
+
+    let newWorkout = generateWorkout({beastMode, muscles, goal});
+    console.log("new workout:",newWorkout);
     setWorkout(newWorkout);
+
+    // window.location.href = "#workout"
   }
 
   return (

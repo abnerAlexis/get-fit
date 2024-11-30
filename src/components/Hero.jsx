@@ -15,7 +15,9 @@ function Hero() {
             I bid you a fond farewell. It’s time to swap the remote for dumbbells, the snacks for smoothies, and 
             the sweatpants for...well, sweatpants—but now they’ll be <span className='text-blue-400 font-medium '>workout-approved</span>.
         </p>
-        <Button text="Accept & Begin"></Button>
+        <Button 
+          text="Accept & Begin"
+        ></Button>
     </div>
   )
 }
