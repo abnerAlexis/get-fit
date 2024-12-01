@@ -12,7 +12,7 @@ export function generateWorkout(args) {
     if (beastMode === "individual") {
         listOfMuscles = muscles;
     } else {
-        listOfMuscles = WORKOUTS[workout][muscles[0]];
+        listOfMuscles = WORKOUTS[beastMode][muscles[0]];
     }
 
     listOfMuscles = new Set(shuffleArray(listOfMuscles));
