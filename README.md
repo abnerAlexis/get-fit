@@ -57,3 +57,8 @@ Now the environment is ready to work with.
 - Create a `components` folder in `src` folder.
 - Create a `jsx` file with the components name. e.g. `Hero.jsx`
 - Shortcut for the component: type `rfce` to populate the component file.
+
+
+# Visit the site
+ https://beast-mode.netlify.app/   
+to experience the app
