@@ -19,7 +19,7 @@ function App() {
     console.log("new workout:",newWorkout);
     setWorkout(newWorkout);
 
-    // window.location.href = "#workout"
+    window.location.href = "#workout"
   }
 
   return (
